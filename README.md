@@ -7,6 +7,7 @@ https://www.kaggle.com/mirichoi0218/insurance
 
 Before running the R file, remember to install all of these packages 
 
+```
 library(psych)
 library(dplyr)
 library(car)
@@ -19,6 +20,7 @@ library(keras)
 library(tfdatasets)
 library(e1071)
 library(pROC)
+```
 
 Run the R file to receive results
 
