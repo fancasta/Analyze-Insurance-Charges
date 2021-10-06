@@ -1,4 +1,4 @@
-# Analyze-Insurance-Charges
+# Analyze Insurance Charges
 We will analyze how multiple factors (E.g. Age, Sex and Smoking status) affect the charges of the insurance company for clients
 
 Dowload the dataset from 
