@@ -1,5 +1,5 @@
 # Analyze-Insurance-Payout
-We will analyze how multiple factors (E.g. Age, Sex and Smoking status) will affect the charges of insurance company for that patients
+We will analyze how multiple factors (E.g. Age, Sex and Smoking status) affect the charges of insurance company for that patients
 
 Dowload the dataset from 
 
