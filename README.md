@@ -1,32 +1,16 @@
-# Analyze Insurance Charges
-We will analyze how multiple factors (E.g. Age, Sex and Smoking status) affect the charges of the insurance company for clients
+# Modelling insurance charges in R
 
-Dowload the dataset from 
+Can the same insurance records answer two different questions: how large a charge might be, and whether it crosses a fixed threshold? This analysis uses age, smoking status, BMI and other recorded characteristics to explore both questions on the public insurance dataset.
 
-https://www.kaggle.com/mirichoi0218/insurance
+| Question | Models in the script | How to read the evaluation |
+| --- | --- | --- |
+| How accurately can the models estimate log charges? | Multiple linear regression, support vector regression and a regression tree | The regression section holds out half the records. RMSE is on the log-charge scale, so it cannot be read as a dollar error. |
+| Which records have charges above 15,000? | Logistic regression and a classification tree | The classification section uses a separate 70/30 split and produces confusion matrices and ROC plots. The threshold is a choice made in the script. |
 
-Before running the R file, remember to install all of these packages 
+## Follow the analysis
 
-```
-library(psych)
-library(dplyr)
-library(car)
-library(tidyverse)
-library(caret)
-library(rpart)
-library(rpart.plot)
-library(caret)
-library(keras)
-library(tfdatasets)
-library(e1071)
-library(pROC)
-```
+Start with the [R script](Final%20Project.R). It creates a binary BMI-range feature, fits the models and generates diagnostic plots. The regression and classification sections use different outcomes and train/test splits, so their scores answer different questions.
 
-Run the R file to receive results
+## Reproduce locally
 
-**Overview of analyzation steps**
-
-* Give a brief background of the data selected
-* Using Multiple Linear Regression to analyse the relationship between independent variables and “charges”
-* Using Support Vector Machines to predict "log(charges)"
-* Using Logit Regression Model and Decision tree to classify the new variable "highcharges"
+Download the insurance CSV from the [dataset page](https://www.kaggle.com/datasets/mirichoi0218/insurance). In an interactive R session, install the packages listed in the script's opening `library()` calls, then source `Final Project.R`. When the file chooser opens, select the downloaded CSV. Inspect the evaluation output and plots in the R session.
